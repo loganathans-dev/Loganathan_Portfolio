@@ -6,23 +6,26 @@ import { FaGithub as Github } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
-      title: "ShoeShop — AI-Powered E-Commerce",
+      title: "Stepora",
+      subtitle: "Online shoe shopping",
       description: "A scalable AI-powered e-commerce platform with responsive UI. Features secure JWT authentication, RBAC, Razorpay integration, and AI-powered product recommendations using the OpenAI API. Includes comprehensive customer and admin dashboards.",
       techStack: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB", "Tailwind", "Razorpay", "OpenAI API"],
-      github: "https://github.com/loganathans-dev/ai-powered-ecommerce",
-      demo: "https://myprojectaipowerd.netlify.app/",
+      github: "https://github.com/loganathans-dev/stepora ",
+      demo: "https://stepora.netlify.app/",
       image: "/shoe_shop.png"
     },
     {
-      title: "Bike Rental Management System",
+      title: "Bikezo",
+      subtitle: "Rental bike hub",
       description: "Complete online bike rental platform featuring bike search, booking, conflict prevention, and rental scheduling logic. Includes an admin dashboard to manage bikes, bookings, users, and pricing.",
       techStack: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB", "Tailwind", "JWT"],
-      github: "https://github.com/loganathans-dev/Bike-rental",
-      demo: "https://snazzy-dragon-64f500.netlify.app/",
+      github: "https://github.com/loganathans-dev/Bikezo",
+      demo: "https://bikzo.netlify.app/",
       image: "/bike_rental.png"
     },
     {
-      title: "VNetPops — Network Visualization",
+      title: "VNetPops",
+      subtitle: "Network Visualization",
       description: "Real-time network visualization platform built with a secure multi-tenant architecture. Features live topology updates via WebSockets, AI-powered topology generation, and an intelligent chatbot using Claude AI.",
       techStack: ["React.js", "Node.js", "MongoDB", "WebSockets", "Claude AI", "Playwright"],
       github: "https://github.com/loganathans-dev",
@@ -33,7 +36,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 transition-colors duration-300">
       <div className="container mx-auto px-6 md:px-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +54,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,34 +70,41 @@ const Projects = () => {
                     <Code className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
                   )}
                 </div>
+
+                <div className="flex items-start justify-between gap-4 mb-1">
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-3 shrink-0 mt-0.5">
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Source Code">
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a href={project.demo} target="_blank" rel="noreferrer" className="text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors" title="View Live Demo">
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+                </div>
                 
-                <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                  {project.title}
-                </h3>
-                
+                {project.subtitle && (
+                  <p className="text-sm font-medium text-indigo-500 dark:text-indigo-400 mb-3">
+                    {project.subtitle}
+                  </p>
+                )}
+
                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
                   {project.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
+
+                <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, i) => (
                     <span key={i} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 rounded-md">
                       {tech}
                     </span>
                   ))}
-                </div>
-
-                <div className="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-slate-700/50">
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">
-                      <Github className="w-4 h-4" /> Source
-                    </a>
-                  )}
-                  {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
-                      <ExternalLink className="w-4 h-4" /> Live Demo
-                    </a>
-                  )}
                 </div>
               </div>
             </motion.div>

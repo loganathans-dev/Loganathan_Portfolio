@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Mail } from 'lucide-react';
-import { FaGithub as Github, FaLinkedin as Linkedin } from 'react-icons/fa';
+import { FaGithub as Github, FaLinkedin as Linkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -89,6 +89,9 @@ const Hero = () => {
             </a>
             <a href="https://linkedin.com/in/loganathan-s-12350535a" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
               <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="https://wa.me/917397533732?text=Hello%20Loganathan,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" rel="noreferrer" className="text-slate-400 hover:text-green-500 transition-colors">
+              <FaWhatsapp className="w-6 h-6" />
             </a>
             <a href="mailto:loganathanofficial25@gmail.com" className="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
               <Mail className="w-6 h-6" />

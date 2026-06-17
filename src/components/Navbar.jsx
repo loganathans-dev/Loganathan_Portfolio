@@ -43,9 +43,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 group">
           <div className="p-2 bg-indigo-500/10 rounded-lg group-hover:bg-indigo-500/20 transition-colors">
-            <Code2 className="text-indigo-500 dark:text-indigo-400 w-6 h-6" />
+            <img src="/favicon.png" alt="" width="30" height="30" />  
           </div>
-          <span className="text-xl font-bold tracking-tighter text-slate-900 dark:text-slate-100">Loganathan<span className="text-indigo-500 dark:text-indigo-400">.</span></span>
+          <span className="text-xl font-bold tracking-tighter text-slate-900 dark:text-slate-100">Loganathan</span>
         </a>
 
         {/* Desktop Nav */}
