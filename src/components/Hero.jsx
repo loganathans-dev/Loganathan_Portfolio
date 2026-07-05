@@ -68,8 +68,8 @@ const Hero = () => {
               Contact Me
             </a>
             <a 
-              href="/Loganathan_Resume.pdf" 
-              download="Loganathan_Resume.pdf"
+              href="/Loganathan_S_Resume.pdf" 
+              download="Loganathan_S_Resume.pdf"
               className="p-3.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none ml-auto md:ml-4 inline-flex items-center justify-center" 
               aria-label="Download Resume"
               title="Download Resume"

@@ -6,30 +6,40 @@ import { FaGithub as Github } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
-      title: "Stepora",
-      subtitle: "Online shoe shopping",
-      description: "A scalable AI-powered e-commerce platform with responsive UI. Features secure JWT authentication, RBAC, Razorpay integration, and AI-powered product recommendations using the OpenAI API. Includes comprehensive customer and admin dashboards.",
-      techStack: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB", "Tailwind", "Razorpay", "OpenAI API"],
-      github: "https://github.com/loganathans-dev/stepora ",
-      demo: "https://stepora.netlify.app/",
-      image: "/shoe_shop.png"
+      title: "MatchHub",
+      subtitle: "Live Sports Score Management",
+      description: "Built a live sports score platform for managing tournaments, teams, players, and match schedules. Enabled real-time score updates using Socket.IO with instant synchronization. Designed role-based dashboards with JWT authentication.",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "JWT", "Tailwind CSS"],
+      github: "https://github.com/loganathans-dev/MatchHub",
+      demo: "https://match-hub.netlify.app",
+      image: "/matchhub.png"
     },
     {
-      title: "Bikezo",
-      subtitle: "Rental bike hub",
-      description: "Complete online bike rental platform featuring bike search, booking, conflict prevention, and rental scheduling logic. Includes an admin dashboard to manage bikes, bookings, users, and pricing.",
-      techStack: ["React.js", "Redux", "Node.js", "Express.js", "MongoDB", "Tailwind", "JWT"],
+      title: "Bikzo",
+      subtitle: "Rental Bike Hub",
+      description: "Developed a full-stack bike rental platform with booking and management features. Integrated Google Maps API and OpenStreetMap for location tracking, along with Razorpay for secure payments and RBAC.",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Google Maps API", "OpenStreetMap", "Razorpay", "JWT"],
       github: "https://github.com/loganathans-dev/Bikezo",
-      demo: "https://bikzo.netlify.app/",
+      demo: "https://bikzo.netlify.app",
       image: "/bike_rental.png"
     },
     {
+      title: "Stepora",
+      subtitle: "AI Powered Shoe E-Commerce",
+      description: "An AI-powered e-commerce platform featuring intelligent product recommendations using the OpenAI API. Implemented secure JWT authentication, Razorpay payments, and optimized MongoDB aggregation pipelines.",
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "OpenAI API", "Razorpay", "Tailwind CSS"],
+      github: "https://github.com/loganathans-dev/stepora",
+      demo: "https://stepora.netlify.app",
+      image: "/shoe_shop.png"
+    },
+    {
       title: "VNetPops",
-      subtitle: "Network Visualization",
+      subtitle: "Real-Time Network Visualization",
       description: "Real-time network visualization platform built with a secure multi-tenant architecture. Features live topology updates via WebSockets, AI-powered topology generation, and an intelligent chatbot using Claude AI.",
-      techStack: ["React.js", "Node.js", "MongoDB", "WebSockets", "Claude AI", "Playwright"],
-      github: "https://github.com/loganathans-dev",
-      demo: ""
+      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "WebSockets", "JWT", "Tailwind CSS", "Claude AI", "Playwright"],
+      github: "https://github.com/loganathans-dev/vnetpops",
+      demo: "",
+      image: "/vnetpops.png"
     }
   ];
 

@@ -5,27 +5,27 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: ["React.js", "Redux Toolkit", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Material-UI (MUI)", "Responsive Design"]
+      skills: ["React.js", "Redux Toolkit", "JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Material UI", "Responsive Design"]
     },
     {
-      title: "Backend & APIs",
-      skills: ["Node.js", "Express.js", "REST API", "RESTful API Design", "Middleware", "JWT Authentication", "RBAC", "WebSockets", "Microservices"]
+      title: "Backend",
+      skills: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "RBAC", "Middleware", "WebSockets", "Microservices"]
     },
     {
       title: "Database",
-      skills: ["MongoDB", "MongoDB Atlas", "PostgreSQL", "Schema Design", "Indexing", "Aggregation Pipelines", "Query Optimization", "Performance Tuning"]
+      skills: ["MongoDB", "MongoDB Atlas", "PostgreSQL", "Schema Design", "Indexing", "Aggregation Pipelines", "Query Optimization"]
     },
     {
-      title: "DevOps & Tools",
-      skills: ["Docker", "Git", "GitHub", "Linux", "Bash", "Netlify", "Render", "CI/CD Pipelines", "VS Code", "Postman", "OpenAI API", "Claude AI"]
+      title: "AI & Integrations",
+      skills: ["OpenAI API", "Claude AI", "Google Maps API", "OpenStreetMap", "Razorpay"]
     },
     {
-      title: "Testing & QA",
-      skills: ["Jest", "Cypress", "Playwright", "Unit Testing", "Integration Testing", "End-to-End Testing", "TDD"]
+      title: "DevOps & Cloud",
+      skills: ["Git", "GitHub", "Linux", "Bash", "Docker", "Netlify", "Render", "CI/CD Pipelines"]
     },
     {
-      title: "Methodologies",
-      skills: ["SDLC", "Agile", "Scrum", "Sprint Planning", "Code Review", "Technical Documentation"]
+      title: "Testing & Tools",
+      skills: ["Jest", "Cypress", "Playwright", "Unit Testing", "Integration Testing", "End-to-End Testing", "VS Code", "Postman", "Cursor AI", "Agile", "Scrum", "SDLC"]
     }
   ];
 
