@@ -1,80 +1,90 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
-    {
-      role: "Full Stack Developer Intern",
-      company: "Coderead Academy",
-      location: "Online",
-      period: "May 2026 – Present",
-      description: [
-        "Developing responsive MERN stack applications under the guidance of senior developers, contributing to production-ready features.",
-        "Building RESTful APIs using Node.js, Express.js, and MongoDB following industry best practices.",
-        "Implementing secure authentication and authorization using JWT and Role-Based Access Control (RBAC).",
-        "Integrating the Razorpay payment gateway to enable secure online payment processing.",
-        "Developing reusable React.js components using Redux Toolkit and Tailwind CSS to improve maintainability and UI consistency.",
-        "Assisting in application testing, debugging, bug fixing, and performance optimization.",
-        "Deploying frontend applications on Netlify and backend services on Render."
-      ],
-      techStack: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Razorpay", "JWT", "Netlify", "Render", "Git"]
-    },
-    {
-      role: "Full Stack Developer",
-      company: "DNASkew Analytics Pvt Ltd",
-      location: "Bengaluru, India",
-      period: "May 2023 – Jan 2026",
-      description: [
-        "Developed and maintained scalable full-stack web applications using React.js, Node.js, Express.js, and MongoDB across the complete SDLC.",
-        "Designed and implemented secure RESTful APIs with JWT authentication, RBAC, input validation, and error handling.",
-        "Built AI-powered chatbot and intelligent recommendation features by integrating OpenAI and Claude APIs.",
-        "Optimized MongoDB schemas, indexing strategies, and aggregation pipelines, improving query performance and reducing API response times.",
-        "Improved frontend performance through lazy loading, code splitting, memoization, and rendering optimizations.",
-        "Containerized applications using Docker and contributed to CI/CD deployment pipelines.",
-        "Led a development team for 6 months by assigning tasks, reviewing pull requests, mentoring junior developers, and resolving technical challenges."
-      ],
-      techStack: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Docker", "JWT", "WebSockets", "OpenAI API", "Claude API", "Tailwind CSS", "Git"]
-    }
-  ];
+  {
+    "role": "Full Stack AI Engineer",
+    "company": "Coderead Software Training Academy Private Limited",
+    "period": "Feb 2026 – Present",
+    "description": [
+      "Developed and enhanced CookDCode, an AI-powered coding education platform with a structured, four-tier evaluation pipeline.",
+      "Integrated Google Gemini API with model fallback handling to provide context-aware programming hints and Socratic-style student guidance.",
+      "Implemented Firebase Realtime Database caching to reuse previously generated hints and reduce redundant AI API calls.",
+      "Built rule-based validators for 13 conditional programming problems, including boundary-value checks and mathematical misconception detection.",
+      "Combined input handling, validation, cached hint retrieval, and dynamic AI generation to deliver personalized learning assistance."
+    ],
+    "techStack": [
+      "Google Gemini API",
+      "Firebase Realtime Database",
+      "Rule-Based Validation",
+      "Prompt Engineering",
+      "Model Fallback Handling"
+    ]
+  },
+  {
+    "role": "Full Stack Developer",
+    "company": "DNASkew Analytics Pvt Ltd",
+    "period": "May 2023 – Jan 2026",
+    "description": [
+      "Developed and maintained MERN web applications using React.js, Node.js, Express.js, and MongoDB.",
+      "Built responsive interfaces with reusable React components for maintainability and consistency.",
+      "Designed RESTful APIs with JWT authentication, role-based access control, request validation, and centralized error handling.",
+      "Implemented interactive dashboards and data modules with React.js and backend API integration.",
+      "Optimized MongoDB queries and indexes to improve API response times and data retrieval efficiency.",
+      "Improved frontend responsiveness through lazy loading, memoization, and code splitting.",
+      "Collaborated on debugging, feature development, and application testing."
+    ],
+    "techStack": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "RBAC",
+      "RESTful APIs",
+      "Git"
+    ]
+  }
+];
 
   return (
-    <section id="experience" className="py-24 bg-slate-100/50 dark:bg-slate-900/50 transition-colors duration-300">
+    <section data-section="experience" id="experience" className="py-24 bg-slate-100/50 dark:bg-slate-900/50 transition-colors duration-300">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, x: -16 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="section-heading mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">Professional Experience</h2>
           <div className="w-20 h-1 bg-indigo-500 rounded-full"></div>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="experience-list max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative pl-8 md:pl-0 mb-16 last:mb-0"
+              initial={{ opacity: 0, x: -16 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.12 }}
+              transition={{ duration: 0.5, delay: (index % 3) * 0.07 }}
+              className="experience-entry relative pl-8 md:pl-0 mb-16 last:mb-0"
             >
-              <div className="md:grid md:grid-cols-5 md:gap-8 items-start">
+              <div className="experience-row md:grid md:grid-cols-5 md:gap-8 items-start">
                 {/* Timeline Line & Dot (Mobile) */}
                 <div className="absolute left-0 top-2 h-full w-0.5 bg-slate-300 dark:bg-slate-700 md:hidden"></div>
                 <div className="absolute left-[-5px] top-2 w-3 h-3 rounded-full bg-indigo-500 md:hidden"></div>
 
-                <div className="md:col-span-1 md:text-right mb-4 md:mb-0 pt-1">
+                <div className="experience-date md:col-span-1 md:text-right mb-4 md:mb-0 pt-1">
                   <span className="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-sm font-medium rounded-full mb-2">
                     {exp.period}
                   </span>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm">{exp.location}</p>
+                  {exp.location && <p className="text-slate-600 dark:text-slate-400 text-sm">{exp.location}</p>}
                 </div>
 
-                <div className="md:col-span-4 relative md:pl-10">
+                <div className="experience-detail md:col-span-4 relative md:pl-10">
                   {/* Timeline Line & Dot (Desktop) */}
                   <div className="hidden md:block absolute left-[15px] top-4 h-full w-0.5 bg-slate-300 dark:bg-slate-700"></div>
                   <div className="hidden md:flex absolute left-0 top-1 w-8 h-8 rounded-full bg-white dark:bg-slate-800 border-2 border-indigo-500 items-center justify-center z-10">
